@@ -8,6 +8,7 @@ import { TacheService } from '../tache.service';
 })
 export class MainComponent implements OnInit {
   employees: object[] = [];
+  imgUrls:string[]= [];
   constructor(private tacheService: TacheService) {
 
   }
