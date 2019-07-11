@@ -39,6 +39,11 @@ div.profil-container {
     box-shadow: 0px 0px 8px 0px black;
 }
 
+/* Permet de de donner une dimension fixe pour les images */
+img {
+    max-width: 300px;
+    max-height: 200px;
+}
 .isSenior {
     background-color: orangered;
     height: 30px;
