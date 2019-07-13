@@ -1,13 +1,32 @@
-@media screen and  (min-width: 576px) {
-    h2{
+@media(min-width: 576px) {
+    h2 {
         text-align: center;
+    }
+    li.employees {
+        width: 100%;
+    }
 
+}
+
+@media(min-width: 320px) and (max-width: 576px) {
+    h2 {
+        font-size: 39px;
+        text-align: center;
+    }
+    li.employees {
+        width: 100%;
+    }
+    div.wrapper {
+        width: 100vw;
     }
     
-    li.employees{
-        width:100%;
-    }
 }
+
+/* @media(max-width: 576px){
+    h2{
+        font-size: ;
+    }
+} */
 
 main {
     background: white;
@@ -39,11 +58,15 @@ div.profil-container {
     box-shadow: 0px 0px 8px 0px black;
 }
 
-/* Permet de de donner une dimension fixe pour les images */
+/* Permet de de donner une dimension fixe pour les images.
+max-width initialisée à 100px pour les mobiles.
+*/
+
 img {
-    max-width: 300px;
+    max-width: 100px;
     max-height: 200px;
 }
+
 .isSenior {
     background-color: orangered;
     height: 30px;
