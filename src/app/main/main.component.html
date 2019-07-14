@@ -3,24 +3,28 @@
         <h2 class="display-4">Liste des employés:</h2>
         <br>
         <div class="profil-wrapper">
-                <li class=" col-sm- col-lg- employees" *ngFor="let employee of employees">
-                        <div class='shadow p-3 mb-5'>
-                    <li>
-                        <img [src]="employee.imgUrls" alt="" class="img-thumbnail">
-                    </li>
-                    <li><b>id: </b>{{employee.id}}</li>
-            
-                    <li><b>Name:</b> {{employee.name}}</li>
-                    <li> <b>Employee_pass:</b> {{employee.employee_pass}}</li>
-                    <span *ngIf="employee.status">
-                        <b>Niveau: </b>{{employee.status}}
-                    </span>
-                </div>
-            
-                </li>
-            
+            <li class=" col-sm- col-lg- employees" *ngFor="let employee of employees">
+                <div class='shadow p-3 mb-5'>
+            <li>
+                <img [src]="employee.imgUrls" alt="" class="img-thumbnail">
+            </li>
+            <li><b>id: </b>{{employee.id}}</li>
+
+            <li><b>Name:</b> {{employee.name}}</li>
+            <li> <b>Employee_pass:</b> {{employee.employee_pass}}</li>
+            <b>Niveau: </b><span [ngClass]="{
+                    'isSenior bg-danger': employee.status ==='senior',
+                    'isJunior bg-success': employee.status === 'junior',
+                    'isMedior bg-warning': employee.status === 'medior'
+            }
+            ">
+                {{employee.status}}
+            </span>
         </div>
-        
+
+        </li>
+
+    </div>
     </div>
 
 </main>

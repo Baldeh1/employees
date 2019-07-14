@@ -68,6 +68,16 @@ img {
 }
 
 .isSenior {
-    background-color: orangered;
-    height: 30px;
+    color: white;
+    padding:0.2em;
+}
+
+.isMedior {
+    color:white;
+    padding:0.2em;
+}
+
+.isJunior {
+    color: white;
+    padding:0.2em;
 }
